@@ -199,7 +199,7 @@ class WC_Gateway_Mercanet extends WC_Payment_Gateway {
 		return parent::get_transaction_url( $order );
 	}
 
-    function getSign($data, $key) {
+    function getSign($data) {
             return hash('sha256', $data.$this->secretKey);
     }
 
